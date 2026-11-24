@@ -1,6 +1,6 @@
 
-import ProductForm from "../../../components/sell/ProductForm";
-import sellData from "../../../data/sellData";
+import ProductForm from "@/components/sell/ProductForm";
+import sellData from "@/data/sellData";
 import "../../../style/sell.css";
 
 export const metadata = {

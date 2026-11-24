@@ -5,9 +5,9 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Search, PackagePlus, Boxes } from "lucide-react";
 
-import sellData, { sampleListings } from "../../data/sellData";
-import SellPageHeader from "../../components/sell/SellPageHeader";
-import SellerProductCard from "../../components/sell/SellerProductCard";
+import sellData, { sampleListings } from "@/data/sellData";
+import SellPageHeader from "@/components/sell/SellPageHeader";
+import SellerProductCard from "@/components/sell/SellerProductCard";
 import "../../style/sell.css";
 
 export default function SellPage() {

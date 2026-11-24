@@ -1,21 +1,31 @@
 
-"use client";
-
-import { use } from "react";
+import { Suspense } from "react";
 import Link from "next/link";
 
-import ProductForm from "../../../../components/sell/ProductForm";
-import sellData, {
-  sampleListings,
-} from "../../../../data/sellData";
-import "../../../../style/sell.css";
+import ProductForm from "@/components/sell/ProductForm";
+import sellData, { sampleListings } from "@/data/sellData";
+import "@/style/sell.css";
 
 export default function EditListingPage({ params }) {
-  const { id } = use(params);
-
-  const product = sampleListings.find(
-    (item) => String(item.id) === String(id)
+  return (
+    <Suspense
+      fallback={
+        <main className="sell-page">
+          <div className="sell-container sell-form-container" role="status">
+            Loading listing...
+          </div>
+        </main>
+      }
+    >
+      <EditListingContent params={params} />
+    </Suspense>
   );
+}
+
+async function EditListingContent({ params }) {
+  const { id } = await params;
+
+  const product = sampleListings.find((item) => String(item.id) === id);
 
   if (!product) {
     return (
