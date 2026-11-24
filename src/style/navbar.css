@@ -1,0 +1,581 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-container {
+  width: min(100% - 32px, 1280px);
+  min-height: 76px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar-logo-image {
+  width: auto;
+  height: 48px;
+  max-width: 190px;
+  object-fit: contain;
+}
+
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.navbar-brand-name {
+  color: #166534;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.navbar-tagline {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.navbar-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.navbar-nav-item-wrapper {
+  position: relative;
+}
+
+.navbar-nav-link {
+  min-height: 42px;
+  padding: 0 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: 0;
+  background: transparent;
+
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  border-radius: 10px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-nav-link:hover {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+
+/* =========================================================
+   SELL BUTTON
+========================================================= */
+
+.navbar-sell-link {
+  background: #166534;
+  color: #ffffff;
+  padding: 0 18px;
+  border-radius: 10px;
+}
+
+.navbar-sell-link:hover {
+  background: #14532d;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CHEVRON
+========================================================= */
+
+.navbar-chevron {
+  transition: transform 0.2s ease;
+}
+
+.navbar-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.navbar-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+
+  width: 390px;
+
+  transform: translateX(-50%);
+
+  padding: 18px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.12);
+
+  animation: navbarDropdown 0.18s ease;
+}
+
+@keyframes navbarDropdown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.navbar-dropdown-header {
+  padding: 2px 4px 14px;
+
+  color: #111827;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.navbar-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.navbar-category-link {
+  display: block;
+
+  padding: 11px 12px;
+
+  color: #475569;
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  border-radius: 9px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-category-link:hover {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.navbar-view-all {
+  display: block;
+
+  margin-top: 12px;
+  padding-top: 13px;
+
+  border-top: 1px solid #e5e7eb;
+
+  color: #166534;
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   DESKTOP ACTIONS
+========================================================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.navbar-icon-button {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #475569;
+  text-decoration: none;
+
+  border-radius: 50%;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-icon-button:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.navbar-login {
+  min-height: 40px;
+  padding: 0 12px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: 9px;
+}
+
+.navbar-login:hover {
+  color: #166534;
+  background: #f0fdf4;
+}
+
+.navbar-register {
+  min-height: 40px;
+  padding: 0 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f59e0b;
+  color: #ffffff;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.navbar-register:hover {
+  background: #d97706;
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+
+.navbar-mobile-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #f8fafc;
+  color: #1e293b;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.navbar-mobile-menu {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .navbar-navigation {
+    gap: 0;
+  }
+
+  .navbar-nav-link {
+    padding: 0 9px;
+    font-size: 13px;
+  }
+
+  .navbar-login {
+    display: none;
+  }
+
+  .navbar-container {
+    gap: 15px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    min-height: 68px;
+    width: min(100% - 24px, 1280px);
+  }
+
+  .navbar-navigation,
+  .navbar-actions {
+    display: none;
+  }
+
+  .navbar-logo-image {
+    height: 42px;
+    max-width: 165px;
+  }
+
+  .navbar-brand-name {
+    font-size: 22px;
+  }
+
+  .navbar-mobile-toggle {
+    display: inline-flex;
+  }
+
+  .navbar-mobile-menu {
+    display: block;
+
+    max-height: 0;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-top: 1px solid transparent;
+
+    transition:
+      max-height 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .navbar-mobile-menu.active {
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
+
+    border-top-color: #e5e7eb;
+  }
+
+  .navbar-mobile-links {
+    padding: 10px 12px;
+  }
+
+  .navbar-mobile-item {
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .navbar-mobile-link {
+    width: 100%;
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 0 10px;
+
+    color: #334155;
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+    background: transparent;
+
+    border: 0;
+
+    cursor: pointer;
+  }
+
+  .navbar-mobile-link:hover {
+    color: #166534;
+  }
+
+  .navbar-mobile-category-button {
+    text-align: left;
+  }
+
+  .navbar-mobile-sell {
+    margin: 8px 0;
+
+    padding: 0 14px;
+
+    background: #166534;
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    justify-content: flex-start;
+  }
+
+  .navbar-mobile-sell:hover {
+    color: #ffffff;
+    background: #14532d;
+  }
+
+  .navbar-mobile-categories {
+    padding: 4px 10px 10px 20px;
+  }
+
+  .navbar-mobile-category {
+    display: block;
+
+    padding: 10px 12px;
+
+    color: #64748b;
+
+    font-size: 14px;
+    text-decoration: none;
+
+    border-radius: 8px;
+  }
+
+  .navbar-mobile-category:hover {
+    background: #f0fdf4;
+    color: #166534;
+  }
+
+  .navbar-mobile-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 14px 12px 20px;
+
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .navbar-mobile-action {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    background: #f8fafc;
+
+    border-radius: 9px;
+  }
+
+  .navbar-mobile-register {
+    grid-column: 1 / -1;
+
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f59e0b;
+    color: #ffffff;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .navbar-container {
+    width: calc(100% - 20px);
+  }
+
+  .navbar-logo-image {
+    max-width: 145px;
+    height: 39px;
+  }
+
+  .navbar-brand-name {
+    font-size: 20px;
+  }
+
+  .navbar-tagline {
+    font-size: 8px;
+  }
+
+}
